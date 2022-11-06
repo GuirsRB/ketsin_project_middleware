@@ -13,6 +13,7 @@ GRANT CREATE ON middleware_quickbooks_test.* TO 'middleware_quickbooks_admin'@'%
 CREATE TABLE deliveries (
     id_delivery int NOT NULL AUTO_INCREMENT,
     direction TEXT NOT NULL,
+    state VARCHAR(100) NOT NULL,
     generation_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_delivery)
 );
@@ -38,7 +39,7 @@ INSERT INTO document_kind(description) VALUES ("DELIVERY_ORDER");
 INSERT INTO document_kind(description) VALUES ("CERTIFICATE");
 INSERT INTO document_kind(description) VALUES ("PICTURE");
 INSERT INTO document_kind(description) VALUES ("RECEIPT");
-INSERT INTO deliveries(direction) VALUES ("direccion 1");
+INSERT INTO deliveries(direction, state) VALUES ("direccion 1", 'Completado');
 INSERT INTO documents_delivery(delivery_id,document_name,document_type,document_kind) VALUES(1,'filepdf.pdf','application/pdf',1);
 INSERT INTO documents_delivery(delivery_id,document_name,document_type,document_kind) VALUES(1,'filetxt.txt','text/plain',2);
 

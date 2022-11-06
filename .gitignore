@@ -1,6 +1,7 @@
 # PROJECT DEV ENVIRONMENT #
 projectEnv
 vmidenv
+files
 # dependencies
 /node_modules
 /.pnp

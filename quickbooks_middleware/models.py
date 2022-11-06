@@ -14,6 +14,7 @@ from django.db import models
 class Deliveries(models.Model):
     id_delivery = models.AutoField(primary_key=True)
     direction = models.TextField()
+    state = models.CharField(max_length=100)
     generation_time = models.DateTimeField(auto_now=True)
 
     class Meta:
